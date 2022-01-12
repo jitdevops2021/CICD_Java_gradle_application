@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools {
+        gradle 'mygradle'
+    }
     options {
      buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '1', numToKeepStr: '2')
           }
