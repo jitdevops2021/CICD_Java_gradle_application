@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    options {
+     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '2')
+          }
     stages{
         stage("Sonar qube quality check"){
             agent {
@@ -19,10 +22,4 @@ pipeline{
             
         }
     }
-    post{
-        always{
-            echo "Hi Build is sucess"
-        }
-        
-    }
-}
+}    
