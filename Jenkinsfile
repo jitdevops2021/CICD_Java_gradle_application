@@ -8,7 +8,7 @@ pipeline{
             agent {
                 docker {
                     image 'openjdk:11'
-                    registryUrl 'https://registry.hub.docker.com'
+                    
                 }
             }
             steps{
